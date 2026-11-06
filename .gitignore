@@ -1,0 +1,53 @@
+# Secrets (keep only the blank environment template)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Python environments and generated caches
+.venv*/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Regenerable Chroma indexes and database files
+/chroma_meta_db/
+/chroma_local_app/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Local evaluation data, outputs, snapshots and environment diagnostics.
+# Publish the rubric and dependency constraints only; inputs quote the source CSV.
+/eval/*
+!/eval/grading-rubric.md
+!/eval/ragas/
+/eval/ragas/*
+!/eval/ragas/constraints-ragas.txt
+
+# Source dataset: keep local until provenance and redistribution terms are recorded
+/dataset/*
+!/dataset/README.md
+
+# Internal requirement document and local session handoff
+/AI코어프로젝트_2회차_요구사항정의서.pdf
+/docs/local-rag-evaluation-handoff.md
+
+# Local logs, editor settings and OS metadata
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
